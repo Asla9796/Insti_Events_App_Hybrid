@@ -100,7 +100,7 @@
             modalButtonCancel: 'Cancel',
             modalUsernamePlaceholder: 'Username',
             modalPasswordPlaceholder: 'Password',
-            modalTitle: 'Framework7',
+            modalTitle: 'LitSoc',
             modalCloseByOutside: false,
             actionsCloseByOutside: true,
             popupCloseByOutside: true,
