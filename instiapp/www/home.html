@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/my-app.css">
   </head>
   <!-- Should be a direct child of BODY -->
- <body>
+ <body ng-app="myApp">
 
  <!-- Tabs, now tabs wrapper is "views" -->
 <div class="views tabs toolbar-fixed">
@@ -24,59 +24,150 @@
   <div id="tab1" class="view tab active">
     <div class="navbar">
       <div class="navbar-inner">
-        <div class="center">View 1</div>
+        <div class="center">Events</div>
+        </div>
       </div>
-    </div>
-    <div class="pages navbar-fixed">
-      <div data-page="home-1" class="page">
-        <div class="page-content">
-          <div class="content-block">
-            <p>This is view 1</p>
+      <div class="pages navbar-fixed">
+        <div data-page="home-1" class="page">
+          <div class="page-content">
+            <div class="content-block">
+              <p>This is view 1</p>
+
+            <div class="card" ng-repeat="event in events" ng-controller="eventsCtrl">
+              <div class="card-header">{{ name }}</div>
+              <div class="card-content">
+                <div class="card-content-inner">
+                  <div class="list-block">
+                    <ul>
+                      <li class="item-content">
+                        <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">{{ date }}</div>
+                          </div>
+                      </li>
+                      <li class="item-content">
+                        <div class="item-media"><i class="icon icon-form-url"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">{{ time }}</div>
+                          </div>
+                      </li>
+                      <li class="item-content">
+                        <div class="item-media"><i class="icon icon-form-gender"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">{{ venue }}</div>
+                        </div>
+                      </li>
+                      <li class="item-content">
+                        <div class="item-media"><i class=""></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">{{ description }}</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+
+            </div>
           </div>
         </div>
       </div>
-    </div>
   </div>
   <!-- Tab 2 - View 2 -->
   <div id="tab2" class="view tab">
     <div class="navbar">
       <div class="navbar-inner">
-        <div class="center">View 2</div>
+        <div class="center">Schedule</div>
+        </div>
       </div>
-    </div>
-    <div class="pages navbar-fixed">
-      <div data-page="home-2" class="page">
-        <div class="page-content">
-          <div class="content-block">
-            <p>This is view 2</p>
+      <div class="pages navbar-fixed">
+        <div data-page="home-2" class="page">
+          <div class="page-content">
+            <div class="content-block">
+              <p>This is view 2</p>
+              <div class="list-block media-list">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><img src="..." width="44"></div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title">Yellow Submarine</div>
+                        </div>
+                        <div class="item-subtitle">Beatles</div>
+                      </div>
+                    </div>
+                  </li>
+      ...
+                </ul>
+              </div>
+ 
+            </div>
           </div>
         </div>
       </div>
-    </div>
   </div>
   <!-- Tab 2 - View 3 -->
   <div id="tab3" class="view tab">
     <div class="navbar">
       <div class="navbar-inner">
-        <div class="center">View 3</div>
+        <div class="center">Clubs</div>
+        </div>
       </div>
-    </div>
-    <div class="pages navbar-fixed">
-      <div data-page="home-3" class="page">
-        <div class="page-content">
-          <div class="content-block">
-            <p>This is view 3</p>
+      <div class="pages navbar-fixed">
+        <div data-page="home-3" class="page">
+          <div class="page-content">
+            <div class="content-block">
+              <p>This is view 3</p>
+
+                <div class="card demo-card-header-pic" ng-repeat="club in clubs" ng-controller="clubsCtrl">
+                  <div style="background-image:url(...)" valign="bottom" class="card-header">{{ name }}</div>
+                <div class="card-content">
+                  <div class="card-content-inner">
+                    <p>{{ description }}</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <a href="#" class="link">Subscribe</a>
+                  <a href="#" class="link">Learn more</a>
+                </div>
+              </div>
+            
+
+
+            </div>
           </div>
         </div>
       </div>
-    </div>
   </div>
+
+
+  <div id="tab4" class="view tab">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="center">Scoreboard</div>
+        </div>
+      </div>
+      <div class="pages navbar-fixed">
+        <div data-page="home-4" class="page">
+          <div class="page-content">
+            <div class="content-block">
+              <p>This is view 4</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
   <!-- Tab bar with tab links -->
   <div class="toolbar tabbar">
     <div class="toolbar-inner">
-      <a href="#tab1" class="tab-link active"><i class="icon demo-icon-1">Label1</i></a>
-      <a href="#tab2" class="tab-link"><i class="icon demo-icon-2">Label2</i></a>
-      <a href="#tab3" class="tab-link"><i class="icon demo-icon-3">Label3</i></a>
+      <a href="#tab1" class="tab-link active"><i class="icon ">Events</i></a>
+      <a href="#tab2" class="tab-link"><i class="icon demo-icon-2">Schedule</i></a>
+      <a href="#tab3" class="tab-link"><i class="icon demo-icon-3">Clubs</i></a>
+      <a href="#tab4" class="tab-link"><i class="icon demo-icon-3">Scoreboard</i></a>
     </div>
   </div>
 </div>
@@ -87,6 +178,8 @@
     
     <!-- Path to Framework7 Library JS-->
     <script type="text/javascript" src="js/framework7.js"></script>
+    <script type="text/javascript" src="js/tabs.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
     <!-- Path to your app js-->
     </body>
 </html> 

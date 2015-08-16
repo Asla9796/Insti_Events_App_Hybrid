@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -32,6 +33,40 @@
         <div class="page-content">
           <div class="content-block">
             <p>This is view 1</p>
+            
+  ...
+  <div class="page-content">
+   
+    <div class="list-block">
+      <ul>
+        <li class="item-content">
+           <div class="item-media"><i class="icon icon-f7"></i></div>
+          <div class="item-inner">
+            <div class="item-title">Date</div>
+            <p></p>
+          </div>
+        </li>
+        <li class="item-content">
+           <div class="item-media"><i class="icon icon-f7"></i></div>
+          <div class="item-inner">
+            <div class="item-title">Place</div>
+          </div>
+        </li>
+        <li class="item-content">
+           <div class="item-media"><i class="icon icon-f7"></i></div>
+          <div class="item-inner">
+            <div class="item-title">Time</div>
+          </div>
+        </li>
+         <li class="item-content">
+           <div class="item-media"><i class="icon icon-f7"></i></div>
+          <div class="item-inner">
+            <div class="item-title">Description</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
           </div>
         </div>
       </div>
@@ -71,14 +106,29 @@
       </div>
     </div>
   </div>
-
+   <div id="tab4" class="view tab">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="center">View 3</div>
+      </div>
+    </div>
+    <div class="pages navbar-fixed">
+      <div data-page="home-4" class="page">
+        <div class="page-content">
+          <div class="content-block">
+            <p>This is view 4</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Tab bar with tab links -->
   <div class="toolbar tabbar">
     <div class="toolbar-inner">
-      <a href="#tab1" class="tab-link active"><i class="icon ">Events</i></a>
-      <a href="#tab2" class="tab-link"><i class="icon demo-icon-2">Calendar</i></a>
-      <a href="#tab3" class="tab-link"><i class="icon demo-icon-3">Clubs</i></a>
-      <a href="#tab3" class="tab-link"><i class="icon demo-icon-3">Scoreboard</i></a>
+      <a href="#tab1" class="tab-link active"><i class="icon demo-icon-1">Label1</i></a>
+      <a href="#tab2" class="tab-link"><i class="icon demo-icon-2">Label2</i></a>
+      <a href="#tab3" class="tab-link"><i class="icon demo-icon-3">Label3</i></a>
+      <a href="#tab4" class="tab-link"><i class="icon demo-icon-3">Label4</i></a>
     </div>
   </div>
 </div>
@@ -89,6 +139,7 @@
     
     <!-- Path to Framework7 Library JS-->
     <script type="text/javascript" src="js/framework7.js"></script>
+    <script type="text/javascript" src="js/tabs.js"></script>
     <!-- Path to your app js-->
     </body>
-</html> 
+</html>
