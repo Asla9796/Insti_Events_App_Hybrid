@@ -1,0 +1,11 @@
+## IITM Events Mobile App, Saarang 2016
+- Official hybrid app (Android & iOS) for LitSoc 2015-2016 (intra-hostel socio-cultural championship)
+- Find official repository [here](https://github.com/The-WebOps-Club/instieventsapp-hybrid)
+- Features:
+  - Login using institute ID and password (LDAP)
+  - Club description and subscription
+  - Events description and RSVPing
+  - Calendar with events of interest
+  - Scoreboard for hostels
+- Built using Ionic platform
+- Languages used: HTML, CSS, AngularJS
